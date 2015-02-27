@@ -24,7 +24,7 @@ var isLogicalArray = require( 'validate.io-logical-array' );
 
 #### isLogicalArray( value )
 
-Validates if a `value` is a logical `array`; i.e., an `array` consisting solely of `0s` and `1s`.
+Validates if a `value` is a logical `array`; i.e., an `array` consisting solely of numeric `0s` and `1s`.
 
 ``` javascript
 var arr = [ 1, 0, 0, 1, 1 ];

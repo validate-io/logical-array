@@ -1,8 +1,10 @@
-logical-array
+Logical Array
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
 > Validates if a value is a logical array.
+
+A logical `array` is defined as an `array` consisting exclusively of `0s` and `1s`. The definition is purely conventional, but such `arrays` are useful when wanting to combine, e.g., boolean-like filtering with element-by-element `array` multiplication. Similar use cases are common in numerical computing [environments](http://www.mathworks.com/help/matlab/ref/logical.html). 
 
 
 ## Installation
@@ -17,18 +19,39 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'validate.io-logical-array' );
+var isLogicalArray = require( 'validate.io-logical-array' );
 ```
 
-#### foo( value )
+#### isLogicalArray( value )
 
-What does this function do?
+Validates if a `value` is a logical `array`; i.e., an `array` consisting solely of `0s` and `1s`.
+
+``` javascript
+var arr = [ 1, 0, 0, 1, 1 ];
+
+var bool = isLogicalArray( arr );
+// returns true
+```
+
+__Note__: the method will return `false` for an empty `array`.
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'validate.io-logical-array' );
+var isLogicalArray = require( 'validate.io-logical-array' );
+
+console.log( isLogicalArray( [1,0,0,1,1] ) );
+// returns true
+
+console.log( isLogicalArray( [] ) );
+// returns false
+
+console.log( isLogicalArray( [true,false] ) );
+// returns false
+
+console.log( isLogicalArray( [1,2,3] ) );
+// returns false
 ```
 
 To run the example code from the top-level application directory,

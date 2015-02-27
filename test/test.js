@@ -44,7 +44,8 @@ describe( 'validate.io-logical-array', function tests() {
 			[1,'2',3],
 			[[],[]],
 			[true,true],
-			[0,0,1,'1']
+			[0,0,1,'1'],
+			[1, new Number(1)]
 		];
 
 		for ( var i = 0; i < values.length; i++ ) {

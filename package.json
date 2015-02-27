@@ -37,7 +37,8 @@
     "url": "https://github.com/validate-io/logical-array/issues"
   },
   "dependencies": {
-    "validate.io-array": "^1.0.3"
+    "validate.io-array": "^1.0.3",
+    "validate.io-number": "^1.0.3"
   },
   "devDependencies": {
     "chai": "2.x.x",
